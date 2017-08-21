@@ -31,10 +31,12 @@ public class ClientHandler implements Runnable {
         String message;
 
         try {
+
             while ((message = reader.readLine()) != null) {
                 System.out.println("Read ["+message+"]");
                 informEveryClient(message);
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

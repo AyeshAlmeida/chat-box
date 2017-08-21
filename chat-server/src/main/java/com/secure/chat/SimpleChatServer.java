@@ -17,6 +17,7 @@ public class SimpleChatServer {
         clientOutputStreams = new ArrayList();
         try {
             ServerSocket serverSocket = new ServerSocket(4242);
+
             while (true) {
                 Socket socket = serverSocket.accept();
                 PrintWriter writer = new PrintWriter(socket.getOutputStream());
@@ -26,6 +27,7 @@ public class SimpleChatServer {
                 checker.start();
                 System.out.println("Got a connection.");
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
