@@ -27,7 +27,6 @@ public class ClientHandler implements Runnable {
     }
 
     public void run() {
-        System.out.printf("Into checker--->");
         String message;
 
         try {
